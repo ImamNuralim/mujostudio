@@ -15,7 +15,7 @@ import App from './App.jsx';
 import Navbar from './components/Navbar.jsx';
 import { Footer } from './components/Footer.jsx';
 import Preloader from './components/Preloader.jsx';
-import About from './pages/About.jsx';
+import About from './pages/About';
 
 
 AOS.init();
