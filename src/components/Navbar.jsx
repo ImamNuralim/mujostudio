@@ -11,9 +11,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
-        setShowNavbar(false); // scroll down
+        setShowNavbar(false);
       } else {
-        setShowNavbar(true); // scroll up
+        setShowNavbar(true);
       }
       setLastScrollY(window.scrollY);
     };
@@ -35,19 +35,19 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
-          <li><a href="/" className="hover:underline">Home</a></li>
-          <li><a href="/about" className="hover:underline">Tentang</a></li>
+          <li><Link to="/" className="hover:underline">Home</Link></li>
+          <li><Link to="/about" className="hover:underline">Tentang</Link></li>
           <li><a href="#proyek" className="hover:underline">Project</a></li>
           <li><a href="#kontak" className="hover:underline">Kontak</a></li>
         </ul>
 
         {/* Hamburger Button */}
         <button
-  className="md:hidden text-white z-50" // tambahkan z-50 kalau perlu
-  onClick={() => setMenuOpen(!menuOpen)}
->
-  {menuOpen ? <X size={28} /> : <Menu size={28} />}
-</button>
+          className="md:hidden text-white z-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
       </div>
 
